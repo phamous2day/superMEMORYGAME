@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+/*Got this from http://lea.verou.me/css3patterns/#japanese-cube*/
+
+background-color:#556;
+background-image: linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+linear-gradient(30deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+linear-gradient(150deg, #445 12%, transparent 12.5%, transparent 87%, #445 87.5%, #445),
+linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a),
+linear-gradient(60deg, #99a 25%, transparent 25.5%, transparent 75%, #99a 75%, #99a);
+background-size:80px 140px;
+background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;;
+}
+
+.header {
+  width: 600;
+  font-family: 'Bangers', cursive;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 4em;
+  text-shadow: 3.5px 3.5px 3.5px grey;
+}
+
+
+.tile {
+  float: left;
+  width: 24%;
+  margin: 0.5%;
+  position: relative;
+}
+
+.column-6 .tile {
+  width: 15.66666%;
+  margin: 0.5%;
+}
+
+.column-8 .tile {
+  width: 11.5%;
+  margin: 0.5%;
+}
+
+.tile img {
+  width: 100%;
+  display: block;
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
+  transition: transform 0.5s;
+  border: 2px solid #aaa;
+}
+
+.tile .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(images/logo-bw.png) center center no-repeat #eee;
+  transition: transform 0.5s;
+  border: 2px solid #aaa;
+}
+
+.tile.open .back,
+.tile.matched .back {
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
+}
+
+.tile.open img,
+.tile.matched img {
+  transform: rotateY(0deg);
+}
