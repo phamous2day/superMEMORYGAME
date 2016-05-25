@@ -2,7 +2,7 @@
 
 
 # Screenshot
-![screenshot](ssMemoryGamescreenshot.png)
+![screenshot](memorygamess.png)
 
 # Notes
 For the first draft, I've designed the grid to hold the tiles using <div> and using "float: left" in the CSS.
