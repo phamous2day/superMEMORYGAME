@@ -15,7 +15,8 @@ http://css3.bradshawenterprises.com/flip/
 
 Shoutout to colouronly85 of deviantart for the images. This is for educational purposes only.
 
-
+# View
+Play it [here](http://phamous2day.github.io/superMEMORYGAME/)
 
 
 
